@@ -1,4 +1,38 @@
 body {
     font-size: 25px;
     margin: 20px;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+form {
+    width: 800px;
+    margin: auto;
+}
+
+input, textarea {
+    font-weight: normal;
+    font-size: 20px;
+}
+
+input:hover, textarea:hover {
+    background-color: #dddddd;
+    cursor: pointer;
+}
+
+legend {
+    color: #363636;
+    font-weight: bold;
+}
+
+fieldset {
+    border-color: #9b9393;
+}
+
+#sexo {
+    width: 350px;
+}
+
+#identificacao {
+    background: url(iconformulario.jpg) no-repeat 100% 100%;
+}
+

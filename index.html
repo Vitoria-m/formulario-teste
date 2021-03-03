@@ -7,8 +7,17 @@
     <link rel=stylesheet href="style.css"/>
     <title>Formulário</title>
 </head>
+
+<script>
+    function calculototal() {
+        var quantidade = parseInt(document.getElementById('quantidadeusuario').value);
+        valortotal = quantidade * 20;
+        document.getElementById('valorapagar').value = valortotal;
+    } 
+</script>
+
 <body>
-    <form method="POST" id="formulario">
+    <form method="POST" id="formulario" oninput="calculototal();">
         <fieldset id="identificacao"><legend>Identificação do usuário</legend>
             <p>Nome: <input type="text" name="onome" id="nomedousuario" size="20" maxlenght="50" placeholder="Nome completo"></p>
             <p>Senha: <input type="password" name="asenha" id="senhadousuario" size="15" maxlength="15" placeholder="Senha"></p>
@@ -54,11 +63,12 @@
             <p><label for="mensagemusuario">Mensagem: </label><textarea name="amensagem" id="mensagemdousuario" cols="45" rows="6" placeholder="Digite a sua mensagem aqui..."></textarea></p>
         </fieldset>
 
-        <!-- <fieldset id="newsletter"><legend>Gostaria de receber novas atualizações por Email</legend> -->
-            <!-- - Sim, sempre que sair uma atualização nova -->
-            <!-- - Sim, porém apenas as mais importantes -->
-            <!-- - Não gostaria. -->
-        <!-- </fieldset> -->
+       <fieldset id="pedido"><legend>Adquira o seu produto</legend>
+        <p><input type="checkbox" name="ocheckbox" id="garantirusuario" checked><label for="garantirusuario">Quero garantir o meu quando estiver disponível!</label></p>
+        <p><label for="corusuario">Cor: </label><input type="color" name="acor" id="corusuario" value="#ffa500"></p>
+        <p><label for="quantidadeusuario">Quantidade: </label><input type="number" name="aquantidade" id="quantidadeusuario" min="0" max="9" value="0"></p>
+        <p><label for="valorapagar">Preço Total: R$</label><input type="text" name="ovalor" id="valorapagar" placeholder="Total a pagar" readonly></p>
+       </fieldset>
     </form>
     
 </body>
