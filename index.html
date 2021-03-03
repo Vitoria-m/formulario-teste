@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=stylesheet href="style.css"/>
+    <title>Formulário</title>
+</head>
+<body>
+    <form method="POST" id="formulario">
+        <fieldset id="identificacao"><legend>Identificação do usuário</legend>
+            <p>Nome: <input type="text" name="onome" id="nomedousuario" size="20" maxlenght="50" placeholder="Nome completo"></p>
+            <p>Senha: <input type="password" name="asenha" id="senhadousuario" size="15" maxlength="15" placeholder="Senha"></p>
+            <p>Email: <input type="email" name="oemail" id="emaildousuario" size="20" maxlenght="60" placeholder="Email"></p>
+            <fieldset id="sexo"><legend>Sexo</legend>
+                <input type="radio" name="osexo" id="masc"> <label for="masc">Masculino</label><br>
+                <input type="radio" name="osexo" id="fem"> <label for="fem">Feminino</label><br>
+                <input type="radio" name="osexo" id="outro"> <label for="outro">Outro</label>
+            </fieldset>
+            <p>Data de nascimento <input type="date" name="adata" id="datadenascimentodousuario"></p>
+        </fieldset>
+
+        <fieldset id="endereco"><legend>Endereço</legend>
+            <p><label for="ruadousuario">Logradouro: </label><input type="text" name="arua" id="ruadousuario" size="20" maxlenght="80" placeholder="Rua, av., trav..."></p>
+
+            <p>Número: <input type="number" name="onumero" id="numerodacasa" min="0" max="9999"></p>
+
+            <p><label for="estadodousuario">Estado:</label> <select name="oestado" id="estadodousuario">
+                <optgroup label="Nordeste">
+                    <option value="MA">Maranhão</option>
+                    <option value="PI">Piauí</option>
+                    <option value="CE">Ceará</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="BA">Bahia</option>
+                </optgroup>
+            </select></p>
+
+            <p><label for="cidadedousuario">Cidade: </label><input type="text" name="acidade" id="cidadedousuario" maxlenght="50" size="20" placeholder="Sua cidade" list="lista-cidades">
+            <datalist id="lista-cidades">
+                <option>Fortaleza</option>
+                <option>Natal</option>
+                <option>Salvador</option>
+                <option>Cariri</option>
+            </datalist></p> 
+        </fieldset>
+
+        <fieldset id="mensagem"><legend>Mensagem: </legend>
+            <p><label for="urgenciadousuario">Grau de urgência: Mín</label><input type="range" name="aurgencia" id="urgenciadousuario" min="0" max="10" step="5">Máx</p>
+            <p><label for="mensagemusuario">Mensagem: </label><textarea name="amensagem" id="mensagemdousuario" cols="45" rows="6" placeholder="Digite a sua mensagem aqui..."></textarea></p>
+        </fieldset>
+
+        <!-- <fieldset id="newsletter"><legend>Gostaria de receber novas atualizações por Email</legend> -->
+            <!-- - Sim, sempre que sair uma atualização nova -->
+            <!-- - Sim, porém apenas as mais importantes -->
+            <!-- - Não gostaria. -->
+        <!-- </fieldset> -->
+    </form>
+    
+</body>
+</html>
